@@ -8,6 +8,8 @@
 #include <map>
 #include <set>
 #include <queue>
+#include <cmath>
+#include <cstdlib>
 
 using namespace std;
 
