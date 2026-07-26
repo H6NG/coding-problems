@@ -5,10 +5,10 @@ Notes:
 - 5x5 matrix
 - 24 zeros
 - matrix is beautiful if the single number one of the matrix is located in its middle
-- middle = (3x3) 
+- middle = (2,2) because we start from index (0,0)
 - let current_pos = (x,y) 
-- let middle be (3,3) 
-- diff = (x,y) - (3,3) = (a,b) 
+- let middle be (2,2) 
+- diff = (x,y) - (2,2) = (a,b) 
 - answer = a + b
 - btw: take the absolute value because answer can be negative
 - mistake not abs(i-2+j-2) it's abs(i-2) + abs(j-2) 
