@@ -49,8 +49,6 @@ bool helper(const vector<int> &arr, int sum)
     }
 
     return false;
-
-    return true;
 }
 
 int main()
