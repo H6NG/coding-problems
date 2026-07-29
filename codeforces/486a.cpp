@@ -1,6 +1,9 @@
+
+/* answer that works, but O(n) 
+
 #include <iostream>
 using namespace std; 
-/* answer that works, but O(n) 
+
 int main(){
 
     long long n, m, sum = 0; 
