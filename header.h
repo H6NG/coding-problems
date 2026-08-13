@@ -15,4 +15,11 @@ using namespace std;
 
 //or just use #include <bits/stdc++.h>
 
+/*in main use: 
+
+ios_base::sync_with_stdio(false);
+cin.tie(NULL);
+
+*/
+
 #endif
