@@ -18,7 +18,7 @@ using namespace std;
 /*in main use: 
 
 ios_base::sync_with_stdio(false);
-cin.tie(NULL);
+cin.tie(nullptr);
 
 */
 
