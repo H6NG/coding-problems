@@ -44,7 +44,15 @@ int main(){
 
     int t; cin >> t; 
     while(t--){
-        
+        ll x, y; 
+        cin >> x >> y; 
+        ll s = x + y; 
+        ll a =0;
+        for(int i = 30; i >= 0; i--){
+            ll j = a|(1LL<<i); 
+            if(j <= x&&(j&(s-j))==0) a = j; 
+        }
+        cout << (a^(s-a)) << ' ' << x-a << '\n'; 
     }
     return 0; 
 }

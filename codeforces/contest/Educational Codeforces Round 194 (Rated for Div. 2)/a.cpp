@@ -44,7 +44,22 @@ int main(){
 
     int t; cin >> t; 
     while(t--){
-        
+        int n, c; 
+        cin >> n; 
+        int cnt = 0; 
+        int first = 0; int last = 0; 
+        for(int i = 0; i < n; i++){
+            cin >> c; 
+            if(c==0){
+                cnt++; 
+            }
+            if(i == 0) first = c; 
+            else if(i == n-1) last = c; 
+        }
+        if(cnt<2) cout << -1 << '\n';
+        else if(first == 0&&last == 0) cout << 0 << '\n';
+        else if((first == 1 && last == 0)||(first ==0 && last ==1)) cout << 1 << '\n'; 
+        else if (first == 1 && last == 1) cout << 2 << '\n';
     }
     return 0; 
 }

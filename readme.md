@@ -10,5 +10,4 @@
 [https://atcoder.jp/users/h4ng](https://atcoder.jp/users/h4ng)
 
 ## CodeChef
-
 [https://www.codechef.com/users/h4ng](https://www.codechef.com/users/h4ng)
