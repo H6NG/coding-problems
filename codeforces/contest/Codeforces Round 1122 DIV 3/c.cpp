@@ -1,6 +1,6 @@
 #ifndef HEADER_H
 #define HEADER_H
-
+ 
 #include <iostream>
 #include <string>
 #include <vector>
@@ -13,51 +13,63 @@
 #include <queue>
 #include <cmath>
 #include <cstdlib>
-
+ 
 using namespace std;
-
+ 
 //or just use #include <bits/stdc++.h>
-
+ 
 /*in main use: 
-
+ 
 ios_base::sync_with_stdio(false);
 cin.tie(nullptr);
-
+ 
 */
-
+ 
 #endif
-
+ 
 using namespace std; 
 using ll = long long; 
 using pii = pair<int, int>;
 using vi = vector<int>;
 using vll = vector<ll>;
-
+ 
 #define pb push_back
 #define all(x) (x).begin(), (x).end()
 #define endl '\n'
-
-
+ 
+ 
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
+ 
     int t; cin >> t; 
     while(t--){
-        int n; cin >> n; 
-        vector<ll> v(n); 
-        for(int i = 0; i < n; i++){
-            ll a; cin >> a; v[i]=a-(i+1); 
+        int n; 
+        cin >> n; 
+        string s; cin >> s;
+        
+        if(s[0] == '1'){
+            int ans = 0; 
+            for(int i = 1; i < n; i++){
+                if(s[i] == '0') ans++; 
+            }
+            cout << ans << endl; 
+            continue;
         }
-        sort(v.begin(), v.end()); 
-        v.erase(unique(v.begin(),v.end()), v.end());
-        int be = 1, curr = 1; 
-        for(size_t i = 1; i < v.size(); i++){
-            if(v[i]==v[i-1]+1) curr++; 
-            else curr=1;
-            be = max(curr, be); 
+        int cnt_zero = 0; 
+        for(char c : s){
+            if(c == '0') cnt_zero++; 
         }
-        cout << be << endl; 
+        int ol = 0; 
+        int zr = cnt_zero; 
+        int ans = n; 
+        for(int i = 0; i <= n; i++){
+            ans = min(ans, ol+zr); 
+            if(i==n) break; 
+            if(s[i] == '1') ol++; 
+            else zr--; 
+        }
+        cout << ans << endl; 
     }
     return 0; 
 }

@@ -1,3 +1,4 @@
+
 #ifndef HEADER_H
 #define HEADER_H
 
@@ -44,20 +45,10 @@ int main(){
 
     int t; cin >> t; 
     while(t--){
-        int n; cin >> n; 
-        vector<ll> v(n); 
-        for(int i = 0; i < n; i++){
-            ll a; cin >> a; v[i]=a-(i+1); 
-        }
-        sort(v.begin(), v.end()); 
-        v.erase(unique(v.begin(),v.end()), v.end());
-        int be = 1, curr = 1; 
-        for(size_t i = 1; i < v.size(); i++){
-            if(v[i]==v[i-1]+1) curr++; 
-            else curr=1;
-            be = max(curr, be); 
-        }
-        cout << be << endl; 
+        int a, b, c; 
+        cin >> a >> b >> c; 
+        if(abs(a+c-b) > abs(a-b)) cout << a+c-b << endl; 
+        else cout << abs(a-b) << endl;
     }
     return 0; 
 }
