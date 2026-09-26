@@ -1,12 +1,12 @@
 #include <string>
-#include <map>
+#include <unordered_map>
 using namespace std; 
 
 class Solution {
 public:
     string evaluate(string s, vector<vector<string>>& knowledge) {
         string ans; string ss; 
-        map<string,string> lookup; 
+        unordered_map<string,string> lookup; 
         for(auto& x : knowledge){
             lookup[x[0]] = x[1]; 
         }
