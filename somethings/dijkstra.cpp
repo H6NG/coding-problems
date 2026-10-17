@@ -13,7 +13,7 @@ vector<ll> dijkstra(int n, vector<vector<pair<int,int>>>& adj, int start){
         auto [d,u] = pq.top(); 
         pq.pop(); 
         if(d!=dist[u]) continue;
-        for(auto [v,w] : adj[u]){
+        for(auto& [v,w] : adj[u]){
             if(dist[u] + w < dist[v]){
                 dist[v] = dist[u] + w; 
                 pq.push({dist[v], v});
